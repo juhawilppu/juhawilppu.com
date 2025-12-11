@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juha Wilppu | Senior Product Engineer (React, Node.js, AWS)</title>
+  <meta name="description" content="Juha Wilppu &ndash; Senior Product Engineer specializing in React, TypeScript, AWS, and cloud-native systems." />
+  <meta property="og:title" content="Juha Wilppu" />
+  <meta property="og:description" content="Senior Product Engineer with 13+ years of experience." />
+  <meta property="og:image" content="https://juhawilppu.com/juha_wilppu_cv.jpg" />
+  <meta property="og:url" content="https://juhawilppu.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#060606">
+  <script>
+    const root = document.documentElement;
+    const saved = localStorage.getItem("theme");
+    if (saved) {
+      root.dataset.theme = saved;
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", saved === "dark" ? "#060606" : "#f4f5f7");
+    } else {
+      const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = systemDark ? "dark" : "light";
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", root.dataset.theme === "dark" ? "#060606" : "#f4f5f7");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("themeToggle").checked = root.dataset.theme === "dark";
+      document.getElementById("themeToggle").addEventListener("change", e => {
+        const next = e.target.checked ? "dark" : "light";
+        root.dataset.theme = next;
+        localStorage.setItem("theme", next);
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", next === "dark" ? "#060606" : "#f4f5f7");
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <nav>
+    <div class="content">
+      <a href="/" class="nav-name">Juha Wilppu</a>
+      <label class="theme-switch">
+        <input type="checkbox" id="themeToggle"></input>
+        <span class="icon">
+          <svg class="sun" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <g stroke-linecap="round">
+              <line x1="12" y1="1" x2="12" y2="4"/>
+              <line x1="12" y1="20" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/>
+              <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="4" y2="12"/>
+              <line x1="20" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/>
+              <line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/>
+            </g>
+          </svg>
+          <svg class="moon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+          </svg>
+        </span>
+      </label>
+    </div>
+  </nav>
+  <div class="content">
+    <section class="row">
+      <div>
+        <h1>Juha Wilppu</h1>
+        <div class="subtitle">Senior Product Engineer</div>
+        <p>
+          I build software with React, Node.js, PostgreSQL and AWS. I've spent 13 years shipping production systems in demanding domains like healthcare and finance.
+        </p>
+
+        <p>
+          I take full ownership in everything from idea to production: shaping requirements, making trade-offs and delivering results. I prefer simple solutions and avoid unnecessary complexity until it adds value.
+        </p>
+        <p>
+          If you'd like to get in touch, <a href="mailto:juha.wilppu@gmail.com">send a message</a>.
+        </p>
+      </div>
+      <img src="saimaa.jpg" class="hero" alt="Juha Wilppu" />
+    </section>
+
+    <section>
+      <h2>Selected work</h2>
+      <div class="cards">
+        <div>
+          <h3>My Provet</h3>
+          <p>Responsible for core architecture, authentication flow, regional routing, AWS infrastructure and CI/CD foundation for the new patient portal.</p>
+          <div class="meta">2025</div>
+          <a href="https://my.provet.com" target="_blank">my.provet.com</a>
+        </div>
+        <div>
+          <h3>Nordhealth.fi</h3>
+          <p>Owned the system's security, performance and AWS architecture. Solved the most complex technical challenges and shaped key product decisions during development.</p>
+          <div class="meta">2023&ndash;2024</div>
+          <a href="https://nordhealth.fi" target="_blank">nordhealth.fi</a>
+        </div>
+        <div>
+          <h3>Siikli</h3>
+          <p>
+            Founder & developer. In daily production use since 2017 with €13M+ invoiced through the system.
+            Designed and built the entire product end-to-end and maintained it in production use for years.
+          </p>
+          <div class="meta">2017&ndash;present</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skill-badges">
+        <span>React</span>
+        <span>TypeScript</span>
+        <span>Node.js</span>
+        <span>PostgreSQL</span>
+        <span>AWS</span>
+      </div>
+    </section>
+
+    <section class="articles">
+      <h2>Articles</h2>
+      <ul>
+        <li>
+          <h3>
+            <span class="circle"></span> <a href="https://blog.juhawilppu.com/zero-downtime-region-migration">
+              Zero-downtime region migration
+          </a>
+          </h3>
+          <div class="meta">How I moved servers from US to Sweden without downtime.</div>
+        </li>
+        <li>
+          <h3>
+            <span class="circle"></span> <a href="https://blog.juhawilppu.com/best-in-class-backups-in-aws">
+              Best-in-class backups in AWS
+            </a>
+          </h3>
+          <div class="meta">How to design snapshot + restore workflows that actually work in production.</div>
+        </li>
+        <li>
+          <h3>
+            <span class="circle"></span> <a href="https://blog.juhawilppu.com/how-ip-whitelisting-mitigated-a-critical-security-issue">
+              How IP whitelisting mitigated a critical security issue
+            </a>
+          </h3>
+          <div class="meta">A small change that prevented automated abuse at scale.</div>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <div class="certification">
+        <img src="aws-certified-sa-pro.png" alt="AWS Certified Solutions Architect &ndash; Professional" width="140" />
+        <div>
+          <h4>AWS Certified Solutions Architect &ndash; Professional</h4>
+          <small>Amazon Web Services, 2025</small><br />
+          <small><a
+              href="https://cp.certmetrics.com/amazon/en/public/verify/credential/90d73eb291474b7ab117e0ab8ce5ed6e"
+              target="_blank">
+              Verify credential
+            </a></small>
+        </div>
+      </div>
+    </section>
+
+<footer>
+    <a href="https://linkedin.com/in/juhawilppu" target="_blank">LinkedIn</a> ·
+    <a href="https://github.com/juhawilppu" target="_blank">GitHub</a> ·
+    <a href="mailto:juha.wilppu@gmail.com">juha.wilppu@gmail.com</a> ·
+    © Juha Wilppu · Espoo, Finland
+</footer>
+
+</body>
+
+</html>
